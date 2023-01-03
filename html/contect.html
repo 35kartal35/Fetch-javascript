@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proje2</title>
+    <link rel="stylesheet" href="/frontend/css/contact.css">
+    
+</head>
+<body>
+    <div class=mainContainer>
+        <form id="contactform">
+            <h1 class="maintitle">İletişim Formu</h1>
+            <div class="formrow">
+                <label id="namelabel" for="name">Isim</label>
+                <input id="nameInput" type="text" placeholder="örn:Alex">
+
+            </div>
+            <div class="formrow">
+                <label id="surnamelabel" for="surname">Soyisim</label>
+                <input id="surname" type="text" placeholder="örn:Ferguson">
+
+            </div>
+            <div class="formrow">
+                <label id="emaillabel" for="email">email</label>
+                <input id="email" type="text" placeholder="örn:mozdemir3545@gmail.com">
+                <p class="inputerror" id="emailerror"></p>
+            </div>
+            <div class="formrow">
+                <label id="mesagelabel" for="message">Mesaj</label>
+                <textarea id="message" cols="30" rows="10"></textarea>
+                <p class="inputerror" id="mesageerror"></p>
+          </div>
+          <div class="submitbtncontainer">
+          <button  type="submit">Gönder</button>
+        </div>
+        </form>
+        
+
+    </div>
+
+
+
+    <script src="/frontend/js/general.js"></script>
+</body>
+</html>
