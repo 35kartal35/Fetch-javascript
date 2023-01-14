@@ -6,31 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Forms</title>
     <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    
 </head>
 <body>
-    <div class="header">
-        <h1>
-            Listelenecek Veriler
-        </h1>
-    </div>
     
+    <h1 class="pageTitle">Veri Tabanındaki Formlar</h1>
+    <div id="yetkisiz">
+      <form id="loginForm">
+        <div class="loginFormRow">
+          <label for="usernameInput">Kullanıcı Adı</label>
+          <input type="text" id="usernameInput" />
+        </div>
+        <div class="loginFormRow">
+          <label for="passwordInput">Şifre</label>
+          <input type="password" id="passwordInput" />
+        </div>
+        <div class="loginFormBtnContainer">
+          <button type="submit">Giriş Yap</button>
+        </div>
+      </form>
+      <p id="loginError"></p>
+    </div>
+    <div id="yetkili">
+      <div id="toTopBtn" class="toTop">
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+    </div>
 
-    <div class="container">
-    <div class="data">
-        <span>name :</span>
-        <span>Mehmet</span>
-    </div>
-    <div class="data">
-        <span>surname :</span>
-        <span>Mehmet</span>
-    </div>
-    <div class="data">
-        <span>mail :</span>
-        <span>mozdemir3545@gmail.com</span>
-    </div>
-    <div class="container">
-        <span>Mesaj</span>
-    </div>
-</div>
+    <script src="../js/listForms.js"></script>
 </body>
 </html>
