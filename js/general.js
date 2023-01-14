@@ -15,6 +15,9 @@ const contactform=document.getElementById("contactform")
 const emailerror=document.getElementById("emailerror")
 
 const mesageerror=document.getElementById("mesageerror")
+const responsecontainer=document.getElementById("responsecontainer")
+const submitBtn=document.getElementById("submitBtn")
+const responseText=document.getElementById("responseText")
 
 nameInput.addEventListener('focusin',()=>{
     namelabel.style.color='#000'
@@ -72,6 +75,10 @@ contactform.addEventListener('submit',(event)=>{
 
 
     }
+
+    submitBtn.disabled=true
+    submitBtn.classList.replace("submitBtnActive","submitBtnDisabled")
+    submitBtn.innerText="Gönderiliyor..."
     fetch("http://localhost:3004/add-form", {
         method:'post',
         headers:{
@@ -83,9 +90,37 @@ contactform.addEventListener('submit',(event)=>{
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
+        if(data.status === 200){
+            responsecontainer.style.display="block"
+            responsecontainer.classList.add("responseSuccess")
+            responseText.innerText="formunuz başarıyla gönderildi"
+            setTimeout(()=>{
+                responsecontainer.style.display='none'
+                responsecontainer.classList.remove("responseSuccess")
+                responseText.innerText=""
+                submitBtn.disabled=false
+                submitBtn.classList.replace("submitBtnDisabled","submitBtnActive")
+                submitBtn.innerText="Gönder"
+                nameInput.value=""
+                surname.value=""
+                email.value=""
+                mesage.value=""
+            },2000)
+        }
     })
     .catch(err=>{
         console.log(err);
+        responsecontainer.style.display="block"
+        responsecontainer.classList.add("responseFail")
+        responseText.innerText="formunuzu gönderirken bir hata oluştu"
+        setTimeout(()=>{
+            responsecontainer.style.display='none'
+            responsecontainer.classList.remove("responseSuccess")
+            responseText.innerText=""
+            submitBtn.disabled=false
+            submitBtn.classList.replace("submitBtnDisabled","submitBtnActive")
+            submitBtn.innerText="Gönder"
+        },2000)
     })
     
 

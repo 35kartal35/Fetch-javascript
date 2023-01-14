@@ -66,7 +66,7 @@
     
 }
 
-.submitbtncontainer button{
+.submitbtnActive{
     border: none;    
     background-color: darkslategrey;
     color: white;
@@ -74,11 +74,20 @@
     cursor: pointer;
     font-size: 20px;
 }
+
+.submitBtnDisabled{
+    border: none;    
+    background-color: darkslategrey;
+    color: gray;
+    padding: 8px 50px;
+    cursor: not-allowed;
+    font-size: 20px;
+}
 textarea{
     resize: none;
 }
 
-.submitbtncontainer button:hover{
+.submitbtnActive:hover{
     border-radius: 4px;
     padding: 8px 70px;
 
@@ -87,4 +96,38 @@ textarea{
 .inputerror{
     font-size: 12px;
     
+}
+#responsecontainer{
+    display: none;
+}
+.responseSuccess{
+    
+    position: absolute;
+    border: 1px solid;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%,-50%);
+    z-index: 10;
+    padding: 30px 50px;
+    background-color: rgb(68, 75, 173);
+    color: white;
+
+}
+
+.responseFail{
+    
+    position: absolute;
+    border: 1px solid;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%,-50%);
+    z-index: 10;
+    padding: 30px 50px;
+    background-color: orangered;
+    color: white;
+}
+
+#responseText{
+    text-align: center;
+    line-height: 40px;
 }
