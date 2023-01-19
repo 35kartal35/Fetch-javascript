@@ -1,6 +1,6 @@
 # Fetch-javascript
-Merhabalar bu projemde html, css ve javascript kullandım. İletişim formunda girilen bilgileri veritabanına gönderdim ve sonra buradaki verileri şifre girmek şartıyla sayfaya listeledim
-Saygılarımla.
+Hello, I used html, css and javascript in this project. I sent the information entered in the contact form to the database and then listed the data here on the page, provided that the password is entered.
+Kind regards
 <br>
 
 
